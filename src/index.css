@@ -2,6 +2,9 @@
   font-family: "JetBrainsMono";
   src: url("JetBrainsMono-Regular.woff2") format("woff2");
 }
+:root {
+  --font-size: 1.3em;
+}
 
 body {
   margin: 0;
@@ -30,7 +33,7 @@ code {
 
 .h-container__left {
   overflow: auto;
-  font-size: 1.2em;
+  font-size: var(--font-size);
 }
 
 .h-container__left[contentEditable="true"]:empty:not(:focus):before {
@@ -60,7 +63,7 @@ code {
 
 .h-container__right {
   overflow: auto;
-  font-size: 1.3em;
+  font-size: var(--font-size);
 }
 
 .h-container__right:focus {
