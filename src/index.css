@@ -1,0 +1,72 @@
+@font-face {
+  font-family: "JetBrainsMono";
+  src: url("JetBrainsMono-Regular.woff2") format("woff2");
+}
+
+body {
+  margin: 0;
+  font-family: "JetBrainsMono", sans-serif, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.padding-5 {
+  padding: 5px;
+}
+
+.h-container {
+  display: flex;
+  height: 100vh;
+  background-color: white;
+  white-space: pre;
+}
+
+.h-container__left {
+  overflow: auto;
+  font-size: 1.2em;
+}
+
+.h-container__left[contentEditable="true"]:empty:not(:focus):before {
+  content: attr(data-text);
+  color: gray;
+}
+
+.h-container__left:focus {
+  outline: none;
+}
+
+.h-container__divider {
+  width: 10px;
+  background-color: #fafafa;
+  position: relative;
+}
+
+.h-container__divider__indicator {
+  writing-mode: vertical-rl;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+  top: 50vh;
+  transform: translateY(-50%);
+  user-select: none;
+}
+
+.h-container__right {
+  overflow: auto;
+  font-size: 1.3em;
+}
+
+.h-container__right:focus {
+  outline: none;
+}
+
+.h-container__divider {
+  cursor: col-resize;
+}
