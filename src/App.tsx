@@ -30,7 +30,7 @@ export function App() {
     return () => {
       leftContainer.removeEventListener("paste", handlePaste);
     };
-  });
+  }, []);
 
   const onDivide: React.MouseEventHandler<HTMLElement> = (e) => {
     if (!moving) {
